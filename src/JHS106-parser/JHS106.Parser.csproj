@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net45;netstandard1.5</TargetFrameworks>
+
+
+        <AssemblyName>JHS106.Parser</AssemblyName>
+        <AssemblyTitle>JHS106.Parser</AssemblyTitle>
+        <RootNamespace>JHS106.Parser</RootNamespace>
+        <PackageId>JHS-106.Parser</PackageId>
+        <Product>JHS-106.Parser</Product>
+
+        <Authors>Matti Sysmäläinen</Authors>
+        <Copyright>Matti Sysmäläinen, 2017</Copyright>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <Description>.NET implementation of Finland's postal address parsing, based on JHS-106 specification (http://www.jhs-suositukset.fi/suomi/jhs106). Implementation is a based on the original Clojure implementation (https://github.com/tomimas/JHS-106).</Description>
+        <Summary>.NET implementation of Finland's postal address parsing</Summary>
+        <PackageTags>JHS-106</PackageTags>
+
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <FileVersion>1.0.0.0</FileVersion>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <Version>0.1.0</Version>
+        <PackageLicenseUrl>https://opensource.org/licenses/EPL-1.0</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/masysma/JHS-106.Parser</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/masysma/JHS-106.Parser.git</RepositoryUrl>
+        <RepositoryType>GIT</RepositoryType>
+    </PropertyGroup>
+
+</Project>
