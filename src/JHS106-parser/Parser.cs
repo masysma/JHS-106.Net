@@ -67,11 +67,15 @@ namespace JHS106.Parser
             const string regexPattern = "(" + streetName + ")(?:" + addressNumber + ")?[\\s]{0,1}(" + stairway + ")?[\\s]{0,1}(?:" + apartment + ")?";
 
             var parts = matchRegex(streetLine, regexPattern);
+
+            if (parts.Length >= 10)
+            {
+
             result.StreetName = parts[1];
 
             if (parts.Length == 20)
             {
-                // Multiple matches --> combined property house number. Map parts from secong match group.
+                    // Multiple matches --> combined property house number. Map parts from second match group.
                 parts[4] = parts[12];
                 parts[5] = parts[13];
                 parts[6] = parts[14];
@@ -111,22 +115,37 @@ namespace JHS106.Parser
             result.Apartment = parts[8] + parts[9];
             result.ApartmentNumber = parts[8];
             result.ApartmentPartition = parts[9];
+            }
 
             // Clean up 
+            if (result.StreetName != null)
+            {
             result.StreetName = result.StreetName.Trim();
             result.StreetName = result.StreetName.Substring(0, 1).ToUpper() + result.StreetName.Substring(1);
             result.StreetName = unabbreviate(result.StreetName);
-
+            }
+            if (result.Number != null)
+            {
             result.Number = result.Number.ToLower();
+            }
 
             if (result.NumberPartition != null)
             {
                 result.NumberPartition = result.NumberPartition.ToLower();
             }
 
+            if (result.ApartmentPartition != null)
+            {
             result.ApartmentPartition = result.ApartmentPartition.ToLower();
+            }
+            if (result.Apartment != null)
+            {
             result.Apartment = result.Apartment?.ToLower();
+            }
+            if (result.Stairway != null)
+            {
             result.Stairway = result.Stairway.ToUpper();
+            }
         }
 
         private string unabbreviate(string str)

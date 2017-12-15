@@ -23,6 +23,25 @@ namespace JHS106.Parser.Tests
             Assert.AreEqual("KOUVOLA", result.PostOffice);
         }
 
+
+        [TestMethod]
+        public void Parser_InvalidAddress_ReturnsEmptyValues()
+        {
+            // Arrange
+            var target = new Parser();
+            var input = "? ?, ?";
+
+            // Act
+            var result = target.Parse(input);
+
+            // Assert
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(null, result.StreetName);
+            Assert.AreEqual("", result.PostalCode);
+            Assert.AreEqual("", result.PostOffice);
+        }
+
         [TestMethod]
         public void Parser_CommonAddressPostOfficeWithIncorrectCase_PostOfficeIsCapitalized()
         {
