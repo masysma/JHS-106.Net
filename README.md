@@ -4,6 +4,8 @@
 
 This implementation is a based on the original Clojure implementation (https://github.com/tomimas/JHS-106).
 
+![build status](https://matari.visualstudio.com/_apis/public/build/definitions/0ab3c8f3-1a15-4fac-83cb-15b9f97697c0/1/badge)
+
 # Getting Started
 You can install the library from nuget.org.
 
@@ -34,7 +36,7 @@ After installing parser can be called normally
 	//      PostOffice           "HELSINKI"  
 	
 	
-	address = jhs106Parser.Parse("Kauppakatu 25-27, 40100 JYVÄSKYLÄ ");
+	address = jhs106Parser.Parse("Kauppakatu 25-27, 40100 JYVÃ„SKYLÃ„ ");
 	
 	// address:
 	//      StreetName  "Kauppakatu"    
@@ -42,7 +44,7 @@ After installing parser can be called normally
 	//      StartNumber "25"    
 	//      EndNumber   "27"    
 	//      PostalCode  "40100" 
-	//      PostOffice  "JYVÄSKYLÄ" 
+	//      PostOffice  "JYVÃ„SKYLÃ„" 
 	
 	
 	address = jhs106Parser.Parse("Ulvilantie 29/4 K 825, FI-00350 HELSINKI");
@@ -65,6 +67,6 @@ If you notice an error or would liek to contribute, please feel free make pull r
 
 ## License
 
-Copyright &copy; 2017 Matti Sysmäläinen
+Copyright &copy; 2017 Matti SysmÃ¤lÃ¤inen
 
 Distributed under the Eclipse Public License.
