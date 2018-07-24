@@ -43,6 +43,24 @@ namespace JHS106.Parser.Tests
         }
 
         [TestMethod]
+        public void Parser_AnotherInvalidAddress_ReturnsEmptyValues()
+        {
+            // Arrange
+            var target = new Parser();
+            var input = "1 1, 1";
+
+            // Act
+            var result = target.Parse(input);
+
+            // Assert
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(null, result.StreetName);
+            Assert.AreEqual("", result.PostalCode);
+            Assert.AreEqual("", result.PostOffice);
+        }
+
+        [TestMethod]
         public void Parser_CommonAddressPostOfficeWithIncorrectCase_PostOfficeIsCapitalized()
         {
             // Arrange

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>net45;netstandard1.5</TargetFrameworks>
@@ -17,10 +17,10 @@
         <Summary>.NET implementation of Finland's postal address parsing</Summary>
         <PackageTags>JHS-106</PackageTags>
 
-        <PackageReleaseNotes></PackageReleaseNotes>
-        <FileVersion>1.0.0.0</FileVersion>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <Version>1.0.0</Version>
+        <PackageReleaseNotes>1.0.1 Fixed handling of erroneous addresses</PackageReleaseNotes>
+        <FileVersion>1.0.1.0</FileVersion>
+        <AssemblyVersion>1.0.1.0</AssemblyVersion>
+        <Version>1.0.1</Version>
         <PackageLicenseUrl>https://opensource.org/licenses/EPL-1.0</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/masysma/JHS-106.Net</PackageProjectUrl>
         <RepositoryUrl>https://github.com/masysma/JHS-106.Net.git</RepositoryUrl>
