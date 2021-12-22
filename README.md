@@ -4,8 +4,6 @@
 
 This implementation is a based on the original Clojure implementation (https://github.com/tomimas/JHS-106).
 
-![build status](https://matari.visualstudio.com/_apis/public/build/definitions/0ab3c8f3-1a15-4fac-83cb-15b9f97697c0/1/badge)
-
 # Getting Started
 You can install the library from nuget.org.
 
